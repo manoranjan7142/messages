@@ -1,101 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Message to Sushree</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #63088a;
-        }
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            max-width: 90%;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-        .box {
-            width: 250px;
-            height: 150px;
-            background: white;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 15px;
-            position: relative;
-            text-align: center;
-            font-size: 18px;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            color: white;
-            font-size: 16px;
-            text-decoration: none;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease;
-            margin: 5px;
-        }
-        .whatsapp-button {
-            background-color: #25D366;
-        }
-        .whatsapp-button:hover {
-            background-color: #1ebe57;
-        }
-        .snapchat-button {
-            background-color: #FFFC00;
-            color: black;
-        }
-        .snapchat-button:hover {
-            background-color: #e6e000;
-        }
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .button-container {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Profile Link</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Animate.css -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"/>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: #fff;
+      overflow: hidden; /* Prevent scroll during loading */
+    }
+
+    body.loaded {
+      overflow: auto;
+    }
+
+    .logo {
+      font-size: 2.5rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: #3366ff;
+      font-weight: 600;
+    }
+
+    .footer-badge {
+      position: fixed;
+      bottom: 15px;
+      left: 15px;
+      background: white;
+      color: black;
+      border-radius: 8px;
+      padding: 6px 10px;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      z-index: 1;
+    }
+
+    label {
+      color: #ccc;
+      margin-bottom: 5px;
+      text-transform: capitalize;
+    }
+
+    input[type="text"] {
+      background-color: #222;
+      border: 1px solid #444;
+      color: #fff;
+    }
+
+    input[type="submit"] {
+      background-color: #3366ff;
+      color: #fff;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #254eda;
+    }
+
+    .social-icons a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #3366ff;
+    }
+
+    /* Loader Styles */
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    #loader.fade-out {
+      opacity: 0;
+      transition: opacity 0.8s ease-out;
+    }
+
+    #main-content {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+
+    #main-content.visible {
+      display: block;
+      opacity: 1;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="box">Sorry tama upare ragili ........................................😔</div>
-        <div class="box">Mate kn pain jealous feel karouthila ...😔 Sethipain ragithili..</div>
-        <div class="box">Ragibara b adhikara nhi.. na ? Sorry.. 😔</div>
-        <div class="box">
-            <p>Ragile b kn pain ragichi pacharibara nahi..
 
-            <br><br>Ragiki bodhe mu khusi achi bodhe..
-            </div>
-        <div class="box">
-            Gote katha kahibi.. Gote pua jadi jana ku like n love karuchi se kebe b chanhiba ni ki ta girl au kaha saha katha hau.....😢 Katha haba re b katha haba achi..</div>
-        <div class="box">Mu ragibara.. karana kan seta janiparilani.. Jadi jane rage ta taku mana jaye ta nuhe ki.. taku block kari ki msg na kari rahihiye..😔😔</div>
-        <div class="box">Mu wait karichi ketebelu tame asi msg daba..😢😢 but you .... <br> Mu ragichi ta rage.. Tama ra kn achi .. mu kia ki Tama upare ragibaku..😊 Sorry</div>
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spinner-border text-primary" style="width: 4rem; height: 4rem;" role="status">
+      <span class="visually-hidden">Loading...</span>
     </div>
-    <div class="button-container">
-        <a class="button whatsapp-button" href="https://wa.me/919556280233" target="_blank">Message on WhatsApp</a>
-    <a class="button snapchat-button" href="https://www.snapchat.com/add/mdalai2025" target="_blank">Message on Snapchat</a>
+  </div>
+
+  <!-- Main Content -->
+  <div id="main-content">
+    <div class="container text-center py-5 animate__animated animate__fadeInDown">
+      <h1 class="logo"><span>Manor</span>anjan.in</h1>
+      <div class="social-icons my-4">
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
     </div>
-    
+
+    <!-- Form -->
+    <div class="container animate__animated animate__fadeInUp">
+      <form id="form">
+        <div class="mb-3">
+          <label for="name" class="form-label">name</label>
+          <input type="text" name="name" id="name" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">email</label>
+          <input type="text" name="email" id="email" class="form-control">
+        </div>
+        <input type="submit" id="button" value="Send Email" class="btn btn-primary w-100">
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-badge shadow animate__animated animate__fadeInUp">
+      <img src="https://img.icons8.com/ios-filled/50/light-on--v1.png" alt="light icon"/>
+      <span>by Manoranjan..</span>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header">
+          <h5 class="modal-title">Message Sent</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          Thank you for reaching out! I'll contact you soon.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script>
+    emailjs.init('zQa3e26BIuJxaFMGs');
+
+    // Form submission
+    document.getElementById('form').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+
+      emailjs.send("default_service", "template_id", {
+        from_name: name,
+        reply_to: email
+      }).then(function () {
+        const modal = new bootstrap.Modal(document.getElementById('successModal'));
+        modal.show();
+        document.getElementById('form').reset();
+      });
+    });
+
+    // Loader functionality
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loader");
+      const content = document.getElementById("main-content");
+
+      setTimeout(() => {
+        loader.classList.add("fade-out");
+
+        setTimeout(() => {
+          loader.style.display = "none";
+          content.classList.add("visible");
+          document.body.classList.add("loaded");
+        }, 800);
+      }, 1000);
+    });
+  </script>
+  <script src="email.js"></script>
 </body>
 </html>
